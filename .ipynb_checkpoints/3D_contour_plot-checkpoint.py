@@ -1,14 +1,16 @@
 import numpy as np
 import streamlit as st
-
-# Create a meshgrid of x and y values
-x = np.linspace(-5, 5, 100)
-y = np.linspace(-5, 5, 100)
-X, Y = np.meshgrid(x, y) 
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
 
 # Define a function to calculate the z values (height) based on x and y
 def f(x, y):
     return np.sin(np.sqrt(x**2 + y**2))
+
+# Create a meshgrid of x and y values
+x = np.linspace(-5, 5, 100)
+y = np.linspace(-5, 5, 100)
+X, Y = np.meshgrid(x, y)
 
 # Calculate the z values for the meshgrid
 Z = f(X, Y)
