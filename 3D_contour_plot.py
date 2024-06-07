@@ -14,14 +14,14 @@ def f(x, y):
 Z = f(X, Y)
 
 # Create a three-dimensional contour plot
-fig = plt.figure(figsize=(8, 6))
+fig = st.figure(figsize=(8, 6))
 ax = fig.add_subplot(111, projection='3d')
 contour = ax.contour3D(X, Y, Z, 50, cmap='viridis')
 
 # Add labels and a colorbar
-ax.set_xlabel('X-axis')
-ax.set_ylabel('Y-axis')
-ax.set_zlabel('Z-axis')
+st.set_xlabel('X-axis')
+st.set_ylabel('Y-axis')
+st.set_zlabel('Z-axis')
 fig.colorbar(contour, ax=ax, label='Z values')
 
 # Show the plot using Streamlit
